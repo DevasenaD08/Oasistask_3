@@ -1,0 +1,111 @@
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #C8A2C8;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            animation: moveCircle linear infinite;
+        }
+
+        @keyframes moveCircle {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(50vh) translateX(50vw);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        .circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            animation-duration: 6s;
+            top: 20vh;
+            left: 20vw;
+        }
+
+        .circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            background-color: #e74c3c;
+            animation-duration: 8s;
+            top: 60vh;
+            left: 40vw;
+        }
+
+        .circle:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background-color: #2ecc71;
+            animation-duration: 10s;
+            top: 80vh;
+            left: 70vw;
+        }
+
+        #todo-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Ensure the to-do list appears above the circles */
+        }
+
+        #todo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+
+        .todo-input {
+            width: 70%;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .add-button {
+            padding: 8px 12px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .checkbox {
+            margin-right: 10px;
+        }
+
+        .task-text {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+        }
+    
